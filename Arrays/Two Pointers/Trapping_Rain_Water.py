@@ -33,4 +33,5 @@ Time Complexity (TC): O(n) — each pointer moves across the array at most once,
 Space Complexity (SC): O(1) — I only used a few variables (lp, rp, lmax, rmax, ans) and no extra arrays.
 
 
+
 '''
