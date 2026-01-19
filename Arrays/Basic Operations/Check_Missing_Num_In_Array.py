@@ -6,8 +6,6 @@ class Solution:
         return sum_of_natural_nums - sum_of_arr
 
 
-
-
 '''
 
 
