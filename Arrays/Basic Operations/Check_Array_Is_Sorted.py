@@ -30,4 +30,5 @@ Space Complexity (SC): O(1) — because I only use a couple of variables (i, j) 
 Small note: the early check arr[0] > arr[-1] is not needed (the pairwise checks already catch everything), but it doesn’t harm correctness for “sorted ascending” definition.
 
 
+
 '''
