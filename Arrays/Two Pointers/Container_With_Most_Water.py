@@ -21,8 +21,6 @@ class Solution:
 
 
 '''
-
-
 I solved “Container With Most Water” using the classic two-pointer approach. I started with two pointers: lp at the left end and rp at the right end. For every pair (lp, rp), I compute the area as width × height, where width is (rp - lp) and height is the minimum of the two heights because water can only be held up to the smaller wall. I keep updating res with the maximum area found so far.
 
 After calculating the area, I move the pointer that has the smaller height. The reason is: the current area is limited by the smaller wall, so keeping that smaller wall and only reducing width won’t help. The only chance to get a bigger area is to move past the smaller wall and hope to find a taller one, which can increase the limiting height even though width decreases. I repeat this until the pointers meet, and res ends up as the maximum possible container area.
@@ -31,8 +29,4 @@ Time Complexity (TC): O(n) — each pointer moves inward at most n times total, 
 Space Complexity (SC): O(1) — only pointers and a result variable are used.
 
 Small code note: your loop condition can be while lp < rp (not <=). When lp == rp, width becomes 0 so area is 0 anyway; using < is the standard clean version.
-
-
-
-
 '''
