@@ -24,15 +24,10 @@ class Solution:
 
 
 '''
-
 I solved “Trapping Rain Water” using the two-pointer + running max approach. The main idea I used is: water trapped at any index depends on the tallest bar on its left and the tallest bar on its right. For each position i, the water it can hold is min(leftMax, rightMax) - height[i]. Instead of precomputing full leftMax/rightMax arrays, I tracked these two maximums while moving inward with two pointers.
 
 I started with lp at the left and rp at the right. As I move, I keep updating lmax as the maximum height seen so far from the left, and rmax as the maximum height seen so far from the right. Then I decide which side to process: if the left bar is smaller than the right bar, I know the left side is the limiting side, so the trapped water at lp is determined by lmax (because there will always be some right boundary at least as tall as the current right bar). So I add lmax - height[lp] to the answer and move lp forward. Otherwise, I process the right side similarly by adding rmax - height[rp] and moving rp backward. Doing this repeatedly counts the trapped water for each bar exactly once.
 
 Time Complexity (TC): O(n) — each pointer moves across the array at most once, so it’s a single linear pass.
 Space Complexity (SC): O(1) — I only used a few variables (lp, rp, lmax, rmax, ans) and no extra arrays.
-
-
-
-
 '''
