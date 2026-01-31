@@ -14,10 +14,6 @@ class Solution:
 
 
 '''
-
-
-
-
 I solved “Two Sum” using a hash map lookup idea. First, I build a dictionary (hashmap) that stores each number as a key and its index as the value. Then I loop through the array again, and for every number nums[i], I compute the needed complement as target - nums[i]. If that complement exists in the hash map and it’s not the same index as i, I return the pair of indices [i, hashmap[compl]] immediately because I found two numbers that add up to the target.
 
 Time Complexity (TC): O(n) — building the hashmap is O(n), and the second loop is O(n); hash lookups are O(1) average, so overall O(n).
@@ -34,7 +30,4 @@ class Solution:
             if compl in hashmap:
                 return [hashmap[compl], i]
             hashmap[num] = i
-
-
-
 '''
