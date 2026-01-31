@@ -70,14 +70,10 @@ class Solution:
 
 
 '''
-
 I solved 3Sum by combining sorting + fixed element + two pointers. First, I sort the array so duplicates come next to each other and so I can move pointers intelligently based on whether the sum is too small or too big. After sorting, I iterate over the array with an index i, treating nums[i] as the first number of the triplet. For each i, my goal becomes: find two numbers after i whose sum is -nums[i]. I also added an early stop: if nums[i] > 0, I break, because once the first number is positive in a sorted array, adding two more numbers will only make the sum bigger than zero.
 
 For the remaining two numbers, I use the two-pointer method: lo = i+1 and hi = n-1. I compute current_sum = nums[i] + nums[lo] + nums[hi]. If the sum is 0, I store the triplet, move both pointers inward, and then skip duplicates on both sides so I don’t generate the same triplet again. If the sum is too small (negative), I move lo right to increase the sum; if the sum is too large (positive), I move hi left to decrease the sum. This works because sorting guarantees that moving pointers changes the sum in a predictable direction.
 
 Time Complexity (TC): O(n²) — sorting costs O(n log n), then for each i you run a two-pointer scan that moves lo/hi across the array at most once, so overall it’s dominated by O(n²).
 Space Complexity (SC): O(1) extra (ignoring the output) — you use constant extra variables; sorting may take extra space depending on the language implementation, and the answer list is output storage.
-
-
-
 '''
