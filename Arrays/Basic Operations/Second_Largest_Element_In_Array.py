@@ -14,15 +14,6 @@ class Solution:
                 mx2 = arr[i]
         return mx2
         
-
-
-
-
-
-
-
-
-
 '''
 we solved this by scanning the array once and keeping track of the top two values while you go. Instead of sorting the array, you used two variables: mx1 to store the largest number seen so far, and mx2 to store the second largest distinct number seen so far.
 
