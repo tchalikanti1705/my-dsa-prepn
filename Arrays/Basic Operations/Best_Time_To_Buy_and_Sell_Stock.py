@@ -11,10 +11,6 @@ class Solution:
             if prices[right]<prices[left]:
                 left = right
         return profit
-
-
-
-
 '''
 I solved “Best Time to Buy and Sell Stock” using a clean one-pass two-pointer idea. I treat left as the day I’m buying (the cheapest price I’ve seen so far) and right as the day I’m selling (current day I’m checking). As I move right forward from day 1 to the end, I compute the profit if I bought at left and sold at right (prices[right] - prices[left]) and keep track of the maximum profit seen so far.
 
