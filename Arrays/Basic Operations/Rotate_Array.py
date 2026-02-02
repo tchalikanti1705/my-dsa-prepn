@@ -21,7 +21,6 @@ class Solution:
         # Step 3: reverse remaining elements
         reverse(k, n - 1)
 
-
 '''
 I solved “Rotate Array” using the 3-reversal trick to rotate the array to the right by k steps in-place. First, I handle the empty array case, and then I reduce k using k %= n so I don’t do unnecessary full rotations when k is bigger than the array size. After that, I use a helper reverse(l, r) function that swaps elements from both ends inward to reverse a portion of the array.
 
