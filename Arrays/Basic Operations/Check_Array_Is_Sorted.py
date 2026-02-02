@@ -13,8 +13,6 @@ class Solution:
                 return False
         return True
 
-
-
 '''
 Revision notes (how I solved it)
 
