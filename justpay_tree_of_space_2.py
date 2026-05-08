@@ -1,3 +1,5 @@
+# cleaner version of the problem v2
+
 class Node:
     def __init__(self, name):
         self.name = name
