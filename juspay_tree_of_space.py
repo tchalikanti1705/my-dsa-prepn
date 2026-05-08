@@ -10,6 +10,8 @@ class Node:
         self.uid = None
 
 
+
+#function to lock
 def lock(node, uid):
     if node.locked:
         return False
@@ -35,7 +37,7 @@ def lock(node, uid):
     node.uid = uid
     return True
 
-
+#unlocking
 def unlock(node, uid):
     if not node.locked or node.uid != uid:
         return False
